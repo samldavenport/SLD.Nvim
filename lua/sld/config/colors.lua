@@ -1,4 +1,4 @@
-  local pallet = {
+local pallet = {
     bg            = "#202020",
     bg_alt        = "#2a2827",
     bg_popup      = "#2e2c2b",
@@ -20,7 +20,7 @@
     cyan          = "#68948a",
     purple        = "#d3869b",
     black         = "#070808",
-  }
+}
 
 local function set_color(group, spec)
     vim.api.nvim_set_hl(0, group, spec)
