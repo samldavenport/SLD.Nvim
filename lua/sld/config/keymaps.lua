@@ -15,3 +15,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- auto format
+vim.keymap.set("n", "<leader>f", function()
+    vim.lsp.buf.format({ async = true })
+end, { desc = "Format buffer" })
