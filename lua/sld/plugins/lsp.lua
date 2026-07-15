@@ -77,10 +77,6 @@ return {
             ----------------------------------------------------------------------
 
             vim.lsp.config("powershell_es", {
-                filetypes = { "ps1", "psm1", "psd1" },
-                root_markers = {
-                    ".git",
-                },
                 settings = {
                     powershell = {
                         codeFormatting = {
@@ -90,7 +86,7 @@ return {
                 },
             })
 
-            vim.lsp.enable("powershell_es")
+	    vim.lsp.enable("powershell_es")
 
         end,
     },
