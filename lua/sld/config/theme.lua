@@ -1,2 +1,3 @@
 vim.api.nvim_set_hl(0, "Normal",      { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1D2021", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalNC",    { bg = "#222222", ctermbg = "NONE"})
