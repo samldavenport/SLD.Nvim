@@ -32,23 +32,14 @@ return {
                 ignore = false,
             },
 
-            actions = {
-                open_file = {
-                    quit_on_open = false,
-                },
-            },
-
 	    actions = {
 		remove_file = {
 		    close_window = true,
 		},
-	    
 		open_file = {
 		    quit_on_open = false,
 		},
 	    },
-       
-	    
 	    update_focused_file = {
 		enable = true,
 		update_root = false,
