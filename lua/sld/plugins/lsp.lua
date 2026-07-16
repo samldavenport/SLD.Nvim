@@ -47,7 +47,7 @@ return {
             vim.lsp.config("clangd", {
                 cmd = {
                     "clangd",
-
+	            "--all-scopes-completion",
                     "--background-index",
                     "--clang-tidy",
                     "--completion-style=detailed",
@@ -67,6 +67,7 @@ return {
                     ".git",
                     "compile_commands.json",
                     "compile_flags.txt",
+		    ".nvim.lua"
                 },
             })
 
