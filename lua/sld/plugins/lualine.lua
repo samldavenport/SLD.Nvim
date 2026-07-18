@@ -1,15 +1,17 @@
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-	require('lualine').setup({
-	    options = {
-                disabled_filetypes = {
-                    statusline = {
-                        "NvimTree",
-                    },
-                },
-            },
-	})
-    end
+	'nvim-lualine/lualine.nvim',
+	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	config = function()
+		require('lualine').setup({
+			options = {
+				disabled_filetypes = {
+					statusline = {
+						"NvimTree",
+					},
+				},
+				section_separators = "",
+				component_separators = "",
+			},
+		})
+	end
 }
