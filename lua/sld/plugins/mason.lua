@@ -30,7 +30,7 @@ return {
                 "clangd",
                 "powershell_es",
                 "lua_ls",
-
+		"neocmake"
             },
 
             automatic_enable = false,

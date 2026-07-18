@@ -10,6 +10,7 @@ return {
         config = function()
 	    require("mason").setup()
 	    require("mason-lspconfig").setup()
+
             vim.lsp.config("lua_ls", {
                 filetypes = { "lua" },
                 root_markers = {
@@ -40,6 +41,7 @@ return {
                 },
             })
             vim.lsp.enable("lua_ls")
+
 	    ----------------------------------------------------------------------
             -- Clangd
             ----------------------------------------------------------------------
@@ -88,6 +90,25 @@ return {
             })
 
 	    vim.lsp.enable("powershell_es")
+	    
+	    ----------------------------------------------------------------------
+            -- CMake 
+            ----------------------------------------------------------------------
+
+            vim.lsp.config("neocmake", {
+                cmd = { "neocmakelsp", "--stdio" },
+
+                filetypes = {
+                    "cmake",
+                },
+
+                root_markers = {
+                    "CMakeLists.txt",
+                    ".git",
+                },
+            })
+
+            vim.lsp.enable("neocmake")
 
         end,
     },
