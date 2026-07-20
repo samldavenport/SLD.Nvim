@@ -9,24 +9,24 @@ return {
             view = {
                 width = 30,
                 side = "left",
-		number = true,
-		relativenumber = true
-	    },
+                number = true,
+                relativenumber = true
+            },
 
             renderer = {
                 group_empty = true,
                 icons = {
                     show = {
-                        file = true,
-                        folder = true,
+                        file         = true,
+                        folder       = true,
                         folder_arrow = true,
-                        git = true,
+                        git          = true,
                     },
                 },
             },
 
             filters = {
-                dotfiles = false,
+                dotfiles = true,
             },
 
             git = {
@@ -34,24 +34,24 @@ return {
                 ignore = false,
             },
 
-	    actions = {
-		remove_file = {
-		    close_window = true,
-		},
-		open_file = {
-		    quit_on_open = false,
-		},
-	    },
-	    update_focused_file = {
-		enable = true,
-		update_root = false,
-	    },
+            actions = {
+                remove_file = {
+                    close_window = true,
+                },
+                open_file = {
+                    quit_on_open = false,
+                },
+            },
+            update_focused_file = {
+                enable = true,
+                update_root = false,
+            },
 
-	    filesystem_watchers = {
-		enable = true,
-	    },
-	})
-	vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {
+            filesystem_watchers = {
+                enable = true,
+            },
+        })
+        vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {
             desc = "Toggle file explorer",
             silent = true,
         })
