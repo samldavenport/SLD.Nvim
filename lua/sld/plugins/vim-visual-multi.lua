@@ -17,12 +17,14 @@ return {
 	    ["Select All"]         = "<C-S-l>",
 
 	    -- Cursor creation (HOME ROW instead of arrows)
-	    ["Add Cursor Down"]    = "<C-j>",
-	    ["Add Cursor Up"]      = "<C-k>",
+	    ["Add Cursor Down"]    = "<C-M-j>",
+	    ["Add Cursor Up"]      = "<C-M-k>",
 
 	    -- Optional: disable arrow versions to avoid muscle memory drift
 	    ["Add Cursor Down (Arrow)"] = "",
 	    ["Add Cursor Up (Arrow)"]   = "",
+
+	    ["Align"] = "<M-a>"
 	}
     
     end
