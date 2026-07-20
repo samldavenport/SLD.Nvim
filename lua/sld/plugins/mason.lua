@@ -7,8 +7,8 @@ return {
                 border = "rounded",
 
                 icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
+                    package_installed   = "✓",
+                    package_pending     = "➜",
                     package_uninstalled = "✗",
                 },
             },
@@ -26,11 +26,11 @@ return {
         opts = {
             ensure_installed = {
 
-		-- servers
+                -- servers
                 "clangd",
                 "powershell_es",
                 "lua_ls",
-		"neocmake"
+                "neocmake"
             },
 
             automatic_enable = false,
