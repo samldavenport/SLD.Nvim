@@ -19,3 +19,14 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format({ async = true })
 end, { desc = "Format buffer" })
+
+-- tabs
+vim.keymap.set("n", "<Tab>",   ">>")
+vim.keymap.set("n", "<S-Tab>", "<<")
+vim.keymap.set("i", "<S-Tab>", "<C-o><<")
+vim.keymap.set("v", "<S-Tab>", "<gv")
+vim.keymap.set("v", "<Tab>",   ">gv")
+
+-- move line up/down
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
