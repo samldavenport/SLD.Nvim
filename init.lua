@@ -1,3 +1,7 @@
+--TODO(SLD)
+-- get absolute path
+-- open in explorer
+
 require('sld.config.keymaps')
 require('sld.config.lazy')
 require('sld.config.options')

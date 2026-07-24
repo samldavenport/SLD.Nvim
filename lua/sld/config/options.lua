@@ -5,6 +5,7 @@ vim.opt.guicursor      = "n-v-c-i:block,a:blinkwait700-blinkoff400-blinkon250-Cu
 vim.opt.termguicolors  = true
 vim.opt.splitright     = true
 vim.opt.splitbelow     = true
+vim.opt.wrap           = false;
 
 vim.o.winborder = "rounded"
 vim.o.exrc      = true
