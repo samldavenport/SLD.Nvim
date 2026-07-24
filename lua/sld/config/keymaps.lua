@@ -2,7 +2,24 @@
 vim.g.mapleader = " "
 
 -- window splitting and navigating
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>sv",
+    function()
+        vim.cmd("vsplit")
+        local buf = vim.api.nvim_create_buf(false, true)
+        vim.api.nvim_win_set_buf(0, buf)
+    end
+)
+
+vim.keymap.set("n", "<leader>sh",
+    function()
+        vim.cmd("split")
+        local buf = vim.api.nvim_create_buf(false, true)
+        vim.api.nvim_win_set_buf(0, buf)
+    end
+)
+
+
+
 vim.keymap.set("n", "<leader>sh", ":split<CR>")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -21,11 +38,11 @@ vim.keymap.set("n", "<leader>f", function()
 end, { desc = "Format buffer" })
 
 -- tabs
-vim.keymap.set("n", "<Tab>",   ">>")
+vim.keymap.set("n", "<Tab>", ">>")
 vim.keymap.set("n", "<S-Tab>", "<<")
 vim.keymap.set("i", "<S-Tab>", "<C-o><<")
 vim.keymap.set("v", "<S-Tab>", "<gv")
-vim.keymap.set("v", "<Tab>",   ">gv")
+vim.keymap.set("v", "<Tab>", ">gv")
 
 -- move line up/down
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
