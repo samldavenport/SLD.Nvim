@@ -6,6 +6,8 @@ return {
         require("cendre").setup({
             background = "hard", -- "hard" | "medium" | "soft"
             italic = false,
+            italic_comments = false,
+            transparent = true
         })
     end,
 }
