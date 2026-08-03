@@ -18,8 +18,6 @@ vim.keymap.set("n", "<leader>sh",
     end
 )
 
-
-
 vim.keymap.set("n", "<leader>sh", ":split<CR>")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -51,3 +49,6 @@ vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
 vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
+
+-- no recording
+vim.keymap.set("v", "Q", "<nop>")
