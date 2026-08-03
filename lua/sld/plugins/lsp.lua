@@ -8,32 +8,33 @@ return {
         },
 
         config = function()
-	    require("mason").setup()
-	    require("mason-lspconfig").setup()
+            require("mason").setup()
+            require("mason-lspconfig").setup()
 
+            local capabilities = require("blink.cmp").get_lsp_capabilities();
             vim.lsp.config("lua_ls", {
-                filetypes = { "lua" },
-                root_markers = {
-                    ".git",
-                    ".luarc.json",
-                    ".luarc.jsonc",
-                },
+                capabilities = capabilities,
+
                 settings = {
                     Lua = {
                         runtime = {
                             version = "LuaJIT",
                         },
+
                         diagnostics = {
                             globals = {
                                 "vim",
                             },
                         },
+
                         workspace = {
+                            library = {
+                                vim.env.VIMRUNTIME,
+                            },
+
                             checkThirdParty = false,
                         },
-                        completion = {
-                            callSnippet = "Replace",
-                        },
+
                         telemetry = {
                             enable = false,
                         },
@@ -42,14 +43,15 @@ return {
             })
             vim.lsp.enable("lua_ls")
 
-	    ----------------------------------------------------------------------
+            ----------------------------------------------------------------------
             -- Clangd
             ----------------------------------------------------------------------
 
             vim.lsp.config("clangd", {
+                capabilities = capabilities,
                 cmd = {
                     "clangd",
-	            "--all-scopes-completion",
+                    "--all-scopes-completion",
                     "--background-index",
                     "--clang-tidy",
                     "--completion-style=detailed",
@@ -62,24 +64,25 @@ return {
                     "cpp",
                     "objc",
                     "objcpp",
-		    "h",
-		    "hpp"
+                    "h",
+                    "hpp"
                 },
                 root_markers = {
                     ".git",
                     "compile_commands.json",
                     "compile_flags.txt",
-		    ".nvim.lua"
+                    ".nvim.lua"
                 },
             })
 
             vim.lsp.enable("clangd")
 
-	    ----------------------------------------------------------------------
-            -- Powershell 
+            ----------------------------------------------------------------------
+            -- Powershell
             ----------------------------------------------------------------------
 
             vim.lsp.config("powershell_es", {
+                capabilities = capabilities,
                 settings = {
                     powershell = {
                         codeFormatting = {
@@ -89,13 +92,14 @@ return {
                 },
             })
 
-	    vim.lsp.enable("powershell_es")
-	    
-	    ----------------------------------------------------------------------
-            -- CMake 
+            vim.lsp.enable("powershell_es")
+
+            ----------------------------------------------------------------------
+            -- CMake
             ----------------------------------------------------------------------
 
             vim.lsp.config("neocmake", {
+                capabilities = capabilities,
                 cmd = { "neocmakelsp", "--stdio" },
 
                 filetypes = {
@@ -109,7 +113,6 @@ return {
             })
 
             vim.lsp.enable("neocmake")
-
         end,
     },
 }
