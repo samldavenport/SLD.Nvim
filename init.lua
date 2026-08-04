@@ -9,3 +9,5 @@ require('sld.config.theme')
 require('sld.config.autocmd')
 --require('sld.config.colors')
 require('sld.config.diagnostics')
+
+vim.deprecate = function() end
