@@ -1,15 +1,8 @@
 -- Highlight selected text when yanked
-vim.api.nvim_create_autocmd("TextYankPost", {
-    group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
-    desc = "Highlight selection on yank",
-    callback = function(event)
-        vim.hl.hl_op({
-            buf       = event.buf,
-            type      = "yank",
-            inclusive = true,
-            timeout   = 100,
-        })
-    end,
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank({ timeout = 100 })
+  end,
 })
 
 -- LSP Attach 
