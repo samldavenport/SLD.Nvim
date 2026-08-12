@@ -12,6 +12,7 @@ local function set_color(group, spec)
     vim.api.nvim_set_hl(0, group, {fg = spec})
 end
 
+
 set_color("@variable.member",    colors.fg)
 set_color("@variable.parameter", colors.fg)
 set_color("@property",           colors.fg)

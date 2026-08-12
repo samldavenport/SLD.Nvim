@@ -3,8 +3,8 @@ return {
 
     config = function()
         require("colorizer").setup({
-	    names = false,
-	    RGB = false,
+	    names  = false,
+	    RGB    = false,
 	    RRGGBB = false
 	})
     end,

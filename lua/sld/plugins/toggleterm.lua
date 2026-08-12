@@ -6,10 +6,11 @@ return {
         config = function()
             require("toggleterm").setup({
                 shell = "pwsh.exe -NoLogo",
-                direction = "float"            
+                size = 15,
+                direction = "horizontal"
             })
 
-            vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>ToggleTerm<CR>")
+            vim.keymap.set({ "n", "t" }, "<C-j>", "<cmd>ToggleTerm<CR>")
         end
     }
 }
