@@ -23,6 +23,7 @@ return {
             "markdown_inline",
             "query",
             "json",
+            "glsl",
         })
 	
 	vim.api.nvim_create_autocmd("FileType", {

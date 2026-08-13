@@ -113,6 +113,19 @@ return {
             })
 
             vim.lsp.enable("neocmake")
+
+            ----------------------------------------------------------------------
+            -- GLSL
+            ----------------------------------------------------------------------
+
+            vim.lsp.config("glsl_analyzer", {
+                capabilities        = capabilities,
+                filetypes           = { "glsl" },
+                root_markers        = { ".git" },
+                cmd                 = {"glsl_analyzer"},
+            })
+
+            vim.lsp.enable("glsl_analyzer")
         end,
     },
 }
