@@ -5,6 +5,7 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
+            "b0o/schemastore.nvim"
         },
 
         config = function()
@@ -126,6 +127,29 @@ return {
             })
 
             vim.lsp.enable("glsl_analyzer")
+
+            ----------------------------------------------------------------------
+            -- JSON 
+            ----------------------------------------------------------------------
+
+            vim.lsp.config("jsonls", {
+                settings = {
+                    json = {
+                        validate = {
+                            enable = true,
+                        },
+
+                        format = {
+                            enable = true,
+                        },
+
+                        schemas = require("schemastore").json.schemas(),
+                    },
+                },
+            })
+
+            vim.lsp.enable("jsonls")
+
         end,
     },
 }
